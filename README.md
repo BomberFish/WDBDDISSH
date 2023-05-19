@@ -1,5 +1,6 @@
-# Doesn't work yet, please ignore
+# Works now, don't ignore
 
+Works: you can attach a debugger tozprocesses
 Doesn't work: the image mounts and loads the launchd jobs, but the launchd jobs can only refer to binaries on the DeveloperDiskImage.
 
 I tried adding my own (developer signed) binaries and it didn't work; not sure if I need to do something specific...
@@ -7,7 +8,7 @@ I tried adding my own (developer signed) binaries and it didn't work; not sure i
 - `./gencert.sh`, or just use the existing certs
 - `sudo ./patchddi.sh`
 - Open `cert.pem` on your device
-- Settings -> General -> VPN & Device Management -> Worth Doing Badly DDI -> Install
+- Settings -> General -> VPN & Device Management -> AbsoluteSolver DDI -> Install
 
   ** WARNING **: adding a certificate SEVERELY reduces your device's security. (The certificate has an expiry date of 2014 to match Apple's, so I don't think this can be used to sniff network traffic, but I'm not completely sure.) Remove this cert IMMEDIATELY after mounting, or (better) generate your own cert.pem
 
