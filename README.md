@@ -1,6 +1,7 @@
 # Works now, don't ignore
 
-Works: you can attach a debugger tozprocesses
+Works: you can attach a debugger to processes
+
 Doesn't work: the image mounts and loads the launchd jobs, but the launchd jobs can only refer to binaries on the DeveloperDiskImage.
 
 I tried adding my own (developer signed) binaries and it didn't work; not sure if I need to do something specific...
