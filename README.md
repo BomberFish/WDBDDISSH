@@ -1,4 +1,9 @@
-# Works now, don't ignore
+# Doesn't work yet, please ignore
+
+## TODO
+
+- Make it work
+- Beg Alfie for fastPathSign2
 
 Works: you can attach a debugger to processes
 

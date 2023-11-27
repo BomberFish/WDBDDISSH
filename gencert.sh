@@ -4,13 +4,13 @@ set -e
 # Use Homebrew's instead
 sed -e "s/# copy_extensions = copy/copy_extensions = copyall/" \
 	/usr/local/etc/openssl@3/openssl.cnf >openssl.cnf
-OPENSSL="/usr/local/Cellar/openssl@3/3.1.0/bin/openssl"
+OPENSSL="/usr/local/Cellar/openssl@3/3.2.0/bin/openssl"
 rm -r demoCA || true
 mkdir -p demoCA/newcerts || true
 echo 01 > demoCA/serial
 touch demoCA/index.txt
 "$OPENSSL" req -newkey rsa:1024 -keyout key.pem -out req.pem -sha256 -nodes \
-	-subj "/C=CA/ST=BC/O=J.C. Jensen in Spaaaaace!!!!/CN=AbsoluteSolver DDI" \
+	-subj "/C=CA/ST=BC/O=BomberFish Industries/CN=DDI" \
 	-addext "basicConstraints=critical, CA:true"
 "$OPENSSL" ca -batch -selfsign -keyfile key.pem -in req.pem -out cert_raw.pem -startdate 070416225531Z -enddate 140416225531Z \
 	-config openssl.cnf
